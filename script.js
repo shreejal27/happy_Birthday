@@ -41,7 +41,7 @@ function initMicrophone() {
                 const maxFrequency = Math.max(...dataArray);
                 if (maxFrequency > 254) {
                     //   console.log('User is blowing into the microphone!');
-                    //   document.getElementById('text').innerHTML = "Blowing";
+                    document.getElementById('text').innerHTML = "!! Happy Birthday !!";
                     // Call the flameToggle function or place your logic here
                     turnOffFlame();
                 }
@@ -76,6 +76,7 @@ function turnOnFlame() {
     if (flame) {
         flame.classList.remove('out');
         flame.classList.add('lit');
+        document.getElementById('text').innerHTML = "";
         removeSmoke();
     } else {
         console.error('Flame element not found');
