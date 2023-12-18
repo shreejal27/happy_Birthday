@@ -8,10 +8,10 @@ body {
     margin: auto;
     width: 200px;
     height: 60px;
-    background: #f2bbc5;
+    background: #fff1c7;
     border-radius: 100%;
 
-    box-shadow: 0px 4px 0px #f2bbc5, 0px 8px 0px #f2bbc5, 0px 12px 0px #7b5d4b,
+    box-shadow: 0px 4px 0px #fff1c7, 0px 8px 0px #fff1c7, 0px 12px 0px #fff1c7,
         0px 16px 0px #7b5d4b, 0px 20px 0px #7b5d4b, 0px 24px 0px #7b5d4b,
         0px 28px 0px #7b5d4b, 0px 32px 0px #7b5d4b, 0px 36px 0px #fff1c7,
         0px 40px 0px #fff1c7, 0px 44px 0px #fff1c7, 0px 48px 0px #fff1c7,
@@ -100,8 +100,51 @@ body {
         box-shadow: 0 0 17px 10px rgba(244, 231, 112, 0.71);
     }
 }
+@keyframes blowOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0) ;
+    }
+    25%{
+        opacity: 0.75;
+        transform: translateY(-30px) ;
+    }
 
+    50% {
+      opacity: 0.5;
+      transform: translateY(-60px) ;
+    }
 
-#text {
-    color: white;
-}
+    75%{
+        opacity: 0.25;
+        transform: translateY(-90px) ;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-120px);
+    }
+  }
+  
+  .smoke {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -20px;
+    left: -2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    animation: blowOut 1.5s infinite linear;
+  }
+  
+  .smoke + .smoke {
+    left: -8px;
+    animation-delay: 0.5s;
+    /* Delay the animation for the second smoke bubble */
+  }
+  
+  .smoke + .smoke + .smoke {
+    left: -5px;
+    animation-delay: 1s;
+    /* Delay the animation for the third smoke bubble */
+  }
+  
