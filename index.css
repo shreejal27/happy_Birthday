@@ -23,6 +23,8 @@ button{
 
 button:hover{
     color: gold;
+    border-top: 1px dotted gold;
+    border-bottom: 1px dotted gold;
 }
 
 .cake {
@@ -177,3 +179,12 @@ button:hover{
     color: #fff;
     font-size: 3.5rem;
   }
+
+  .link{
+    position: absolute;
+    margin-top: 2rem;
+    margin-left: -3rem;
+    color: white;
+    font-size: 1.5rem;
+    /* border: 1px solid white; */
+}
