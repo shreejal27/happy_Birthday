@@ -186,5 +186,14 @@ button:hover{
     margin-left: -3rem;
     color: white;
     font-size: 1.5rem;
-    /* border: 1px solid white; */
+    text-decoration: none;
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+    padding: 0.5rem;
+}
+
+.link:hover{
+    color: gold;
+    border-top: 1px dotted gold;
+    border-bottom: 1px dotted gold;
 }
